@@ -31,5 +31,7 @@ services:
         handler: index.handler
         environmentVariables:
           ALIYUN: 'true'
+          ltphone: ${{ secrets.ltphone }}
+          ltpwd: ${{ secrets.ltpwd }}
         memorySize: 128
         timeout: 300
