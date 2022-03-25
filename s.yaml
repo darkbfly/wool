@@ -35,3 +35,10 @@ services:
           ALIYUN: 'true'
         memorySize: 128
         timeout: 300
+      triggers:
+        - name: Chinaunicom
+          type: timer
+          config:    
+            payload: 'Chinaunicom'
+            cronExpression: 'CRON_TZ=Asia/Shanghai 5 9,11,18 * * * *'
+            enable: true
