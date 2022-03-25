@@ -32,6 +32,12 @@ services:
         environmentVariables:
           ltphone: ${env.ltphone}
           ltpwd: ${env.ltpwd}
+          iku_EMAIL: ${env.iku_EMAIL}
+          iku_PWD: ${env.iku_PWD}
+          JJ_EMAIL: ${env.JJ_EMAIL}
+          JJ_PWD: ${env.JJ_PWD}
+          HJH_EMAIL: ${env.HJH_EMAIL}
+          HJH_PWD: ${env.HJH_PWD}
           ALIYUN: 'true'
         memorySize: 128
         timeout: 300
@@ -41,4 +47,11 @@ services:
           config:    
             payload: 'Chinaunicom'
             cronExpression: 'CRON_TZ=Asia/Shanghai 5 9,11,18 * * * *'
+            enable: true
+      triggers:
+        - name: jcCheck
+          type: timer
+          config:    
+            payload: 'jcCheck'
+            cronExpression: 'CRON_TZ=Asia/Shanghai 0 0 8 * * *'
             enable: true

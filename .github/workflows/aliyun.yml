@@ -16,6 +16,12 @@ jobs:
       ALI_ACCOUNTID: ${{ secrets.ALI_ACCOUNTID }}
       ltphone: ${{ secrets.ltphone }}
       ltpwd: ${{ secrets.ltpwd }}
+      iku_EMAIL: ${{ secrets.iku_EMAIL }}
+      iku_PWD: ${{ secrets.iku_PWD }}
+      JJ_EMAIL: ${{ secrets.JJ_EMAIL }}
+      JJ_PWD: ${{ secrets.JJ_PWD }}
+      HJH_EMAIL: ${{ secrets.HJH_EMAIL }}
+      HJH_PWD: ${{ secrets.HJH_PWD }}
       ALL_SECRETS: ${{ toJson(secrets) }}
     steps:
       - uses: actions/checkout@v2
