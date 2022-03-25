@@ -45,11 +45,17 @@ services:
           type: timer
           config:    
             payload: 'Chinaunicom'
-            cronExpression: 'CRON_TZ=Asia/Shanghai 5 9,11,18 * * * *'
+            cronExpression: 'CRON_TZ=Asia/Shanghai 0 5 9,11,18 * * *'
             enable: true
         - name: jcCheck
           type: timer
           config:    
             payload: 'jcCheck'
             cronExpression: 'CRON_TZ=Asia/Shanghai 0 0 8 * * *'
+            enable: true
+        - name: flhs
+          type: timer
+          config:    
+            payload: 'flhs'
+            cronExpression: 'CRON_TZ=Asia/Shanghai 0 0 8-23 * * *'
             enable: true
