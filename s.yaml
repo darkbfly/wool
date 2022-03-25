@@ -36,6 +36,7 @@ services:
           iku_PWD: ${env.iku_PWD}
           JJ_EMAIL: ${env.JJ_EMAIL}
           JJ_PWD: ${env.JJ_PWD}
+          flhsCookie: ${env.flhsCookie}
           ALIYUN: 'true'
         memorySize: 128
         timeout: 300
