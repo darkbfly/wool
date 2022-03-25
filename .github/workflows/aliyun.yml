@@ -22,6 +22,7 @@ jobs:
       JJ_PWD: ${{ secrets.JJ_PWD }}
       HJH_EMAIL: ${{ secrets.HJH_EMAIL }}
       HJH_PWD: ${{ secrets.HJH_PWD }}
+      flhsCookie: ${{ secrets.flhsCookie }}
       ALL_SECRETS: ${{ toJson(secrets) }}
     steps:
       - uses: actions/checkout@v2
