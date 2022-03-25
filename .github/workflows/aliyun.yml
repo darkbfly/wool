@@ -1,0 +1,25 @@
+name: 阿里云函数部署
+on:
+  # schedule:
+  #   - cron: '10 1,8,15 * * *'
+  workflow_dispatch:
+  # push:
+    # paths:
+    #   - 'src/*.*'
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      ALI_KEYID: ${{ secrets.ALI_KEYID }}
+      ALI_KEYSECRET: ${{ secrets.ALI_KEYSECRET }}
+      ALI_ACCOUNTID: ${{ secrets.ALI_ACCOUNTID }}
+      ALL_SECRETS: ${{ toJson(secrets) }}
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+      - name: set serverless.yml and push env
+        run: |
+          npm install @serverless-devs/s -g
+          s config add --AccessKeyID $ALI_KEYID --AccessKeySecret $ALI_KEYSECRET --AccountID $ALI_ACCOUNTID
+          s deploy -y --use-local

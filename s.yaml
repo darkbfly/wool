@@ -1,0 +1,35 @@
+edition: 1.0.0
+name: 自动部署Wool服务
+access: default
+
+vars: # 全局变量
+  region: cn-hangzhou
+  service:
+    name: wool-deploy-service
+    description: '自动部署Wool服务'
+    logConfig: auto
+  # JD_COOKIE: ${{ secrets.JD_COOKIE }}
+
+services:
+  helloworld: # 业务名称/模块名称
+    component: fc
+    actions: # 自定义执行逻辑
+      pre-deploy: # 在deploy之前运行
+        - run: s build  # 要运行的命令行
+          path: ./ # 命令行运行的路径
+      # post-deploy: # 在deploy之后运行
+      #   - run: s versions   # 要运行的命令行
+      #     path: ./ # 命令行运行的路径
+    props: #  组件的属性值
+      region: ${vars.region}
+      service: ${vars.service}
+      function:
+        name: wool-deploy-function
+        description: '自动部署Wool服务'
+        runtime: nodejs14
+        codeUri: ./
+        handler: index.handler
+        environmentVariables:
+          ALIYUN: 'true'
+        memorySize: 128
+        timeout: 300
