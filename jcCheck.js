@@ -7,23 +7,23 @@ https://raw.githubusercontent.com/QiFengg/QuantumultX_Conf/main/Scripts/jcCheck.
 /*
 1.好家伙机场
 付费 便宜3.99 50g  流量每隔31天重置 签到每天1g-4g随机 可看NF 速度快 提供小火箭下载账号 
-注册地址:haojiahuo.live/auth/register?code=FErc
+注册地址:https://haojiahuo.live/auth/register
 */
 let hjh = {
-  email: "",
-  pwd: "",
+  email: process.env.HJH_EMAIL,
+  pwd: process.env.HJH_PWD,
 };
 
 /*
 2.ikuuu机场
-注册地址:https://ikuuu.co/auth/register?code=Hg2Y
+注册地址:https://ikuuu.co/auth/register
 白嫖版 注册送50g 签到每天1g以内 随机 速度还行
 套餐10元300g 提供小火箭下载账号
 */
 
 let iku = {
-  email: "",
-  pwd: "",
+  email: process.env.iku_EMAIL,
+  pwd: process.env.iku_PWD,
 };
 
 /*
@@ -34,8 +34,8 @@ let iku = {
 */
 
 let jj = {
-  email: "",
-  pwd: "",
+  email: process.env.JJ_EMAIL,
+  pwd: process.env.JJ_PWD,
 };
 
 const $ = new Env("机场签到");
