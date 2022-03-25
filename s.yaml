@@ -8,9 +8,7 @@ vars: # 全局变量
     name: wool-deploy-service
     description: '自动部署Wool服务'
     logConfig: auto
-  JD_COOKIE: ${{ secrets.JD_COOKIE }}
-  ltphone: ${{ secrets.ltphone }}
-  ltpwd: ${{ secrets.ltpwd }}
+  # JD_COOKIE: ${{ secrets.JD_COOKIE }}
 
 services:
   helloworld: # 业务名称/模块名称
@@ -32,8 +30,8 @@ services:
         codeUri: ./
         handler: index.handler
         environmentVariables:
+          ltphone: ${secrets.ltphone}
+          ltpwd: ${secrets.ltpwd}
           ALIYUN: 'true'
-          ltphone: ${env.ltphone}
-          ltpwd: ${env.ltpwd}
         memorySize: 128
         timeout: 300
