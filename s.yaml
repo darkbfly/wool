@@ -46,7 +46,6 @@ services:
             payload: 'Chinaunicom'
             cronExpression: 'CRON_TZ=Asia/Shanghai 5 9,11,18 * * * *'
             enable: true
-      triggers:
         - name: jcCheck
           type: timer
           config:    
