@@ -30,8 +30,8 @@ services:
         codeUri: ./
         handler: index.handler
         environmentVariables:
-          ltphone: ${secrets.ltphone}
-          ltpwd: ${secrets.ltpwd}
+          ltphone: ${env.ltphone}
+          ltpwd: ${env.ltpwd}
           ALIYUN: 'true'
         memorySize: 128
         timeout: 300

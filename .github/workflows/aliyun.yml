@@ -14,6 +14,8 @@ jobs:
       ALI_KEYID: ${{ secrets.ALI_KEYID }}
       ALI_KEYSECRET: ${{ secrets.ALI_KEYSECRET }}
       ALI_ACCOUNTID: ${{ secrets.ALI_ACCOUNTID }}
+      ltphone: ${{ secrets.ltphone }}
+      ltpwd: ${{ secrets.ltpwd }}
       ALL_SECRETS: ${{ toJson(secrets) }}
     steps:
       - uses: actions/checkout@v2
