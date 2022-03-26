@@ -38,6 +38,7 @@ services:
           JJ_PWD: ${env.JJ_PWD}
           flhsCookie: ${env.flhsCookie}
           jrttjsbHeader: ${env.jrttjsbHeader}
+          ksjsbCookie: ${env.ksjsbCookie}
           ALIYUN: 'true'
         memorySize: 128
         timeout: 300
