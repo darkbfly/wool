@@ -37,6 +37,7 @@ services:
           JJ_EMAIL: ${env.JJ_EMAIL}
           JJ_PWD: ${env.JJ_PWD}
           flhsCookie: ${env.flhsCookie}
+          jrttjsbHeader: ${env.jrttjsbHeader}
           ALIYUN: 'true'
         memorySize: 128
         timeout: 300
