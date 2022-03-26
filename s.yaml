@@ -61,3 +61,15 @@ services:
             payload: 'flhs'
             cronExpression: 'CRON_TZ=Asia/Shanghai 0 0 8-23 * * *'
             enable: true
+        - name: ksjsb
+          type: timer
+          config:    
+            payload: 'ksjsb'
+            cronExpression: 'CRON_TZ=Asia/Shanghai 0 38 9-19 * * *'
+            enable: true
+        - name: jrttjsb
+          type: timer
+          config:    
+            payload: 'jrttjsb'
+            cronExpression: 'CRON_TZ=Asia/Shanghai 0 1-59/15 6-23 * * *'
+            enable: true
