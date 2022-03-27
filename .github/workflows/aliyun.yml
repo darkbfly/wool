@@ -25,6 +25,7 @@ jobs:
       flhsCookie: ${{ secrets.flhsCookie }}
       jrttjsbHeader: ${{ secrets.jrttjsbHeader }}
       ksjsbCookie: ${{ secrets.ksjsbCookie }}
+      jzttToken: ${{ secrets.jzttToken }}
       ALL_SECRETS: ${{ toJson(secrets) }}
     steps:
       - uses: actions/checkout@v2
