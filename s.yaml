@@ -40,7 +40,7 @@ services:
           jrttjsbHeader: ${env.jrttjsbHeader}
           ksjsbCookie: ${env.ksjsbCookie}
           jzttToken: ${env.jzttToken}
-          testsecret: ${env.ALL_SECRETS.testsecret}
+          testsecret: ${env.ALL_SECRETS}
           ALIYUN: 'true'
         memorySize: 128
         timeout: 300
