@@ -26,7 +26,7 @@ services:
       function:
         name: wool-deploy-function
         description: '自动部署Wool服务'
-        runtime: nodejs14
+        runtime: nodejs12
         codeUri: ./
         handler: index.handler
         environmentVariables:
