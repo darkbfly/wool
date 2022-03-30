@@ -41,6 +41,7 @@ services:
           ksjsbCookie: ${env.ksjsbCookie}
           jzttToken: ${env.jzttToken}
           testsecret: ${env.ALL_SECRETS}
+          jrttjsbReadNum: 3
           ALIYUN: 'true'
         memorySize: 128
         timeout: 300
@@ -62,7 +63,7 @@ services:
           config:    
             payload: 'flhs'
             cronExpression: 'CRON_TZ=Asia/Shanghai 0 0 8-23 * * *'
-            enable: true
+            enable: false
         - name: ksjsb
           type: timer
           config:    
