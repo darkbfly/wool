@@ -40,7 +40,6 @@ services:
           jrttjsbHeader: ${env.jrttjsbHeader}
           ksjsbCookie: ${env.ksjsbCookie}
           jzttToken: ${env.jzttToken}
-          testsecret: ${env.ALL_SECRETS}
           jrttjsbReadNum: 3
           ALIYUN: 'true'
         memorySize: 128
