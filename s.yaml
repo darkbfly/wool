@@ -79,5 +79,5 @@ services:
           type: timer
           config:    
             payload: 'jztt'
-            cronExpression: 'CRON_TZ=Asia/Shanghai 0 15 0,6-23 * * *'
+            cronExpression: 'CRON_TZ=Asia/Shanghai 0 25 0,6-23 * * *'
             enable: true
