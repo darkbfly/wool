@@ -40,6 +40,7 @@ services:
           jrttjsbHeader: ${env.jrttjsbHeader}
           ksjsbCookie: ${env.ksjsbCookie}
           jzttToken: ${env.jzttToken}
+          kugouurl: ${env.kugouurl}
           jrttjsbReadNum: 3
           ALIYUN: 'true'
         memorySize: 128
@@ -80,4 +81,10 @@ services:
           config:    
             payload: 'jztt'
             cronExpression: 'CRON_TZ=Asia/Shanghai 0 25 0,6-23 * * *'
+            enable: true
+        - name: kgdzb
+          type: timer
+          config:    
+            payload: 'kgdzb'
+            cronExpression: 'CRON_TZ=Asia/Shanghai 0 2 * * * *'
             enable: true
