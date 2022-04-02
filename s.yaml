@@ -81,7 +81,7 @@ services:
           config:    
             payload: 'jztt'
             cronExpression: 'CRON_TZ=Asia/Shanghai 0 25 0,6-23 * * *'
-            enable: true
+            enable: false
         - name: kgdzb
           type: timer
           config:    
