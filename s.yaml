@@ -68,8 +68,8 @@ services:
           type: timer
           config:    
             payload: 'ksjsb'
-            cronExpression: 'CRON_TZ=Asia/Shanghai 0 38 9-19 * * *'
-            enable: true
+            cronExpression: 'CRON_TZ=Asia/Shanghai 0 38 7-23 * * *'
+            enable: false
         - name: jrttjsb
           type: timer
           config:    
