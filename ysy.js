@@ -1,39 +1,41 @@
-/*
-软件名称:萤石云视频
-完成时间：2021-10-13 @YaphetS0903
-感谢tom大哥连线指导
+/*萤石云视频 @YaphetS0903
 
-10.15更新，解决ck一天失效问题，需要重新抓取数据，
-10.16更新自动提现
 
-cron 21 15 * * * ysy.js
+cron 21 15 * * * https://raw.githubusercontent.com/YaphetS0903/JStest/main/ysy.js
 
-食用方法：
+脚本库：https://github.com/YaphetS0903/JStest/
+boxjs地址 :  https://raw.githubusercontent.com/YaphetS0903/JStest/main/YaphteS0903.boxjs.json
 
-重新登录萤石云视频，抓包
-需要登录的header、body和cookie三个数据
+
+
+[脚本说明]
+
+目前只能做签到和开宝箱任务，也不可以提现了
+
+
+
+[青龙变量]
+
+抓3个数据，重新登录！重新登录才可以抓到数据
+
 https://api.ys7.com/v3/users/login/v2
 
-header用header转json工具转换
-http://www.songluyi.com/ChangeHeaderToDict/
+把header转成JSON格式；body查看表单即可获取
 
-body查看表单即可获取
-
-cookie获取
+CK获取
 https://api.ys7.com/v3/integral/yd/getUserOpenBoxCd
 
+提现body 查看表单获取数据
 
-提现body链接 抓post数据-查看表单
 https://api.ys7.com/v3/integral/yd/pay
 
-————————
+#萤石云
+export ysyhd=''
+export ysybody='account=188********'
+export cookie='"ASG_DisplayName=***"'
+export txbody='payCode=101006&receiverType=2&receiverId=2********'
 
-环境配置(多账号@隔开)export ysyhd='抓取的header1@抓取的header2'
-例：
-export ysyhd='{"clientType":"1","Accept-Encoding":"gzip, deflate, br","netType":"WIFI","Co..........Content-Length":"450"}@账号2的数据'
-export ysybody='account=123456&biz.......callTokenType%5C%22%3A1%7D%22%7D%5D&smsCode=@账号2的数据'
-export cookie='"ASG_DisplayName=pgekc1; C_SS.............GBBehbyvORvekQPYYT87ps8gAtU; C_TYPE=1; C_VER=6.1.3.1262766"@账号2的数据'
-export txbody='payCode=101005&receiverType=2&receiverId=123456789@账号2的数据'
+
 
 */
 const $ = new Env('萤石云视频');
