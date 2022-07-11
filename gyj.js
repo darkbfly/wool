@@ -1,24 +1,33 @@
-/*
+/*佣金帝 @liuqi6968
 11.01
- 感谢  @YaphetS0903  @tom_2101 和群友们提供技术支持！！！！
-软件： 安卓 佣金帝 
-  ios   佣金帝
-各大应用商店都有
- 半成品 目前只有签到和看视频 后期随缘更新吧
-收益:  1000:1 最低2元兑换现金 每月25号后可提现到支付宝 (返利软件大部分都是这个德行)
 
-
-获取ck：  点击签到赚钱图标即可------  
-https://client.atomsh.com/e00-bee-client/client/act/getGoldCount
-    复制token
-    
- 青龙环境配置  export gyjhd="token1@token2@token3"
- 
 cron 21 15 * * * gyj.js
 
-重写：-------https://client.atomsh.com:10012/e00-bee-client/client/act/getGoldCount
-重写目标 https://raw.githubusercontent.com/liuqi6968/-/main/gyj.js
-主机名：------client.atomsh.com
+脚本库：https://raw.githubusercontent.com/liuqi6968/-/main/gyj.js
+作者已删
+
+
+[脚本说明]
+
+安卓：佣金帝；ios：佣金帝
+
+入口：首页-签到赚钱，提现在我的页面
+
+目前只有每天视频任务可做，50金币≈0.05元，2000金币兑换2元，每月25号后10元起提
+
+
+
+[青龙变量]
+
+抓包，进APP-签到赚钱，即可获取
+
+https://client.atomsh.com/e00-bee-client/client/act/getGoldCount
+
+复制token值，添加到环境变量，多账号@隔开
+    
+export gyjhd='token1@token2@token3'
+
+
  
 */
  

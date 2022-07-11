@@ -1,28 +1,50 @@
-/*
-软件名称:返利购
-完成时间：2021-10-29 @YaphetS0903
+/*返利购 @YaphetS0903
+
+cron 0,30 8 * * * https://raw.githubusercontent.com/YaphetS0903/JStest/main/flg.js
+
+脚本库：https://github.com/YaphetS0903/JStest/
+boxjs地址 :  https://raw.githubusercontent.com/YaphetS0903/JStest/main/YaphteS0903.boxjs.json
+
+
+[脚本说明]
+
+原名返利购，后更名更名为利淘优选
+
+每天约0.2-0.3，主要是连续7天签到，有额外的1+3元，这样每周大概有6+
+
+
+
+[更新说明]
 
 10.30更新，只需要抓一个referer, 删掉抓cookie，解决"&"出错问题，感谢@Tom大佬建议和群友提供的任务包，增加浏览任务和每日首单任务
+
 10.31更新，加入报名打卡，早起打卡任务，使用app5分钟任务，兑换金币成现金，请务必在早上7-9点之间运行脚本
 
-返利购 POST包
-青龙环境抓取链接https://api.flgflg.com/htmmall/api/gold/finishedVideoNum
 
-环境配置(@隔开)
+
+[青龙变量]
+
+抓POST包，进APP-我的-签到，即可获取数据，多账号@隔开
+
+https://api.flgflg.com/htmmall/api/gold/finishedVideoNum
+
+#返利购/利淘优选
 export flgReferer='抓取的Referer1@抓取的Referer2'
-请务必在早上7-9点之间运行脚本
 
 
-圈X配置如下，其他自行测试，运行一次即可
 
+
+[QX重写]
 [task_local]
 #返利购
 0,30 8 * * * https://raw.githubusercontent.com/YaphetS0903/JStest/main/flg.js, tag=返利购, enabled=true
-[rewrite_local]
-#返利购
-https://api.flgflg.com/htmmall/api/gold/finishedVideoNum url script-request-body https://raw.githubusercontent.com/YaphetS0903/JStest/main/flg.js
+
 [MITM]
 hostname = api.flgflg.com
+[rewrite_local]
+https://api.flgflg.com/htmmall/api/gold/finishedVideoNum url script-request-body https://raw.githubusercontent.com/YaphetS0903/JStest/main/flg.js
+
+
 */
 
 const $ = new Env('返利购');

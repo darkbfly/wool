@@ -1,37 +1,36 @@
-/*
+/*快音 @soy
 
-安卓软件名称:快音
+cron 0-59/10 6-20 * * * https://raw.githubusercontent.com/soytool/script/main/app_kyin.js
 
-项目注册地址:https://landing.kaixinyf.cn/e30aze?invite_code=2S7B4S&_timestamp=1644398479&sign=15c82c2822432391d8402109a0762609&app_name=kuaiyin&device_id=1148692d61103e7c&client_v=5.03.03&platform=Android&platform_brand=blackshark&utm_source=xiaomi&um_from_appkey=5d91d0ed570df3d8ed000cb9&share_from=weixin&share_position=wuren
-
-邀请码:2S7B4S或22F8Q3
-
-声明：会有黑号还是黑设备的状态(账号异常)，注册后登录上去自行提现0.3元，如果能提现到账就可以跑脚本，不能你跑了也没啥用，到最后也提现不了
-
-==========================================
-账号数据由3部分组成
-device-id值&access-token值&refresh_token值
-寻找方法:退出登录,开抓包,点微信登录成功后找 https://api.kaixinyf.cn/passport/UnionLogin 链接
-注释: device-id值在请求头里面找,access-token值和refresh_token值在登录成功后 响应 里面找
-==========================================
-在脚本同级目录创建一个文件
-文件名:soy_variable_data.js
-soy_variable_data.js文件内容如下
-
-//添加账号后需要在后面添加一个逗号(英文输入法的),
-//最后一个账号后面是没有逗号的
-//变量不能使用单引号引起
-module.exports = {"code":200,
-"variable_data":{
-"kyin":[//这里是脚本标识,下面的 kyin 就是给快音脚本使用的标识
-"123456",//这是第一个账号
-"123456",//这是第二个账号
-"123456"//这是第三个账号
-]}
-}
+脚本库：https://github.com/soytool/script
 
 
-cron 0-59/10 6-20 * * * https://gitee.com/soy-tool/app-script/raw/master/app_kyin.js
+[脚本说明]
+
+会有黑号还是黑设备的状态(账号异常)，注册后登录上去自行提现0.3元，如果能提现到账就可以跑脚本，不能你跑了也没啥用，到最后也提现不了
+
+
+[青龙变量]
+
+退出登录-开抓包-微信登录成功后即可获取数据
+https://api.kaixinyf.cn/passport/UnionLogin
+
+> device-id值在请求头里面找
+
+> access-token值和refresh_token值在响应的set-cookie里面找，注意只要token的value值
+
+在脚本同级目录创建一个soy_variable_data.js文件，代码参考如下
+
+
+module.exports = {"code":200, 
+"variable_data":{ 
+"kyin":[//快音
+"device-id值&access-token值&refresh_token值",//这是第一个账号
+"",//多账号逗号换行
+]
+}}
+
+
 
 */
 

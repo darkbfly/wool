@@ -1,37 +1,34 @@
-/*
-cron 18 7 * * * yml_javascript/bsly.js
+/*百事乐元 @yml
 
-软件名称：百事乐元 微信小程序
-羊毛地址：微信扫码打开
-收益: 只有积分,可以换购实物  快乐水  快乐水
+cron 18 7 * * * bsly.js
+
+TG群：https://t.me/yml_tg
+脚本库：https://github.com/yml2213/javascript
+
+
+
+[脚本说明]
+
+百事乐元 微信小程序，只有积分,可以换购实物和快乐水
 
 3-24   签到任务   token 有效期测试中 
 计划行双平台脚本测试,青龙完成  圈x自行测试，不行请@我修一下
 感谢所有测试人员
 
-注意事项 ： 一定要仔细阅读一下内容
-              青龙填写格式
-=============青龙变量格式=============
-必填变量：  export yml_bsly_data='xxxx@xxxx'   
-可选变量    yml_bsly_UA='xxxxxx'
- 多账号使用 @ 分割；
-(再给小白啰嗦一句:export XXX ==> 是青龙 "配置文件" 变量格式; 如果要在 "环境变量" 中添加,不需要export)
-=============青龙变量实例=============
-export yml_bsly_data='9e4425abc6b4206a99b30ab2bbd84b38090f2d03705ffed07f181893f9a44009'
-=============变量解释==========
-token的值    抓包小程序即可  doSignIn 关键字   body中找到 token的值  
-UA是 User-Agent 的简称   自己填写自己抓包的即可，不填使用默认UA
-=============变量获取==========
-懒得写了，自己研究吧
 
-https://pepcoin.pepsico.com.cn/api/wxapp/doSignIn            
-              圈x填写格式  
-============= mimt(主机名) =============
-mimt= pepcoin.pepsico.com.cn
-============= 重写 =============
-https://pepcoin.pepsico.com.cn/api/wxapp/  url  script-request-body  https://raw.githubusercontent.com/yml2213/javascript/master/bsly/bsly.js
 
-还是不会的请百度或者群里求助：QQ群：1001401060  tg：https://t.me/yml_tg
+[青龙变量]
+
+抓POST包，获取token值即可，作者说找doSignIn，我没找到用了下面链接的token
+
+https://pepcoin.pepcoinbypepsico.com.cn/api/wxapp/doGetUserInfo
+
+UA可选变量，填不填自己看着办
+
+export yml_bsly_data='token值'
+export yml_bsly_UA='Mozilla/5.0***android'
+
+
 
 */
 

@@ -1,12 +1,38 @@
-/*
-v3.9
-滴滴橙心果园脚本,支持自动浇水及部分任务
-手动抓包获取token,手机在boxjs里填写
-boxjs订阅地址:https://gitee.com/passerby-b/javascript/raw/master/JD/passerby-b.boxjs.json
-docker环境变量名:DD_TOKEN,多账号用换行或者应为逗号(,)隔开
+/*滴滴果园v3.9 @passerby-b
 
+cron 10 0,8,12,18 * * * https://raw.githubusercontent.com/passerby-b/didi_fruit/main/dd_fruit.js
+
+脚本库：https://github.com/passerby-b/didi_fruit/
+boxjs订阅地址:https://gitee.com/passerby-b/javascript/raw/master/JD/passerby-b.boxjs.json
+
+
+
+[脚本说明]
+
+可以种水果或者打车券
+
+
+
+[青龙变量]
+
+抓get包，进app-5天种水果，浇一次水，搜water
+
+> 找不到的搜`game.xiaojukeji.com`，里面找带有`wsgsig`的链接
+
+请求里找到token的值就可以了
+
+把请求主题中的 token 值复制出来，多账户用,号(英文)隔开
+
+    export DD_TOKEN='token1,token2'
+
+拉库了的记得把dd_cookie.js从运行列表中禁用
+
+
+
+[圈X重写]
 [task_local]
 10 0,8,12,18 * * * https://raw.githubusercontent.com/passerby-b/didi_fruit/main/dd_fruit.js
+
 
 */
 

@@ -1,30 +1,44 @@
-﻿/*
-软件名称:返利好省
-完成时间：2021-11-6 @YaphetS0903
+﻿/*返利好省 @YaphetS0903
 
-收益：
-一天3-4毛，注册后点现金福利，弹出一个弹窗看广告，看完后会有1元豆子兑换，去提现1元秒到
+cron 0 8-23 * * * https://raw.githubusercontent.com/YaphetS0903/JStest/main/flhs.js
+
+脚本库：https://github.com/YaphetS0903/JStest/
+boxjs地址 :  https://raw.githubusercontent.com/YaphetS0903/JStest/main/YaphteS0903.boxjs.json
+
+
+
+[脚本说明]
+
+收益一天3-4毛，注册后点现金福利，弹出一个弹窗看广告，看完后会有1元豆子兑换，去提现1元秒到
+
 不需要绑定手机，微信登录即可，多账号上吧
 
-boxjs地址 :  
-https://raw.githubusercontent.com/YaphetS0903/JStest/main/YaphteS0903.boxjs.json
 
-返利好省
-青龙环境抓取链接https://api.uutequan.com/v1/welfare/page
-随便哪一个Cookie应该都行
-环境配置(@隔开，json格式)
-export flhsCookie='抓取的Cookie1@抓取的Cookie2'
 
-圈X配置如下，其他自行测试
-一小时运行一次即可
+[青龙变量]
+
+抓包，进APP-现金福利，即可获取
+
+https://api.uutequan.com/v1/welfare/page
+
+随便哪一个Cookie应该都行，多账号@隔开，json格式
+
+export flhsCookie='Cookie1@Cookie2'
+
+
+
+[QX重写]
 [task_local]
 #返利好省
 0 8-23 * * * https://raw.githubusercontent.com/YaphetS0903/JStest/main/flhs.js, tag=返利好省, enabled=true
+
+[MITM]
+hostname = api.uutequan.com
 [rewrite_local]
 #返利好省
 https://api.uutequan.com/v1/welfare/page url script-request-header https://raw.githubusercontent.com/YaphetS0903/JStest/main/flhs.js
-[MITM]
-hostname = api.uutequan.com
+
+
 */
 
 

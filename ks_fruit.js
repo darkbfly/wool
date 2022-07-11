@@ -1,18 +1,37 @@
-/*
-v2.1.0
-快手果园任务脚本,支持qx,loon,shadowrocket,surge,nodejs
-手机设备在boxjs里填写cookie
-开启抓包工具,果园浇一次水,在抓包记录里搜water,复制请求头里的cookie
+/*快手果园v2.1.0 @passerby-b
+
+
+cron 30 1,8,12,17 * * * https://raw.githubusercontent.com/passerby-b/ks_fruit/main/ks_fruit.js
+
+脚本库：https://github.com/passerby-b/didi_fruit/
 boxjs订阅地址:https://gitee.com/passerby-b/javascript/raw/master/JD/passerby-b.boxjs.json
 
+
+
+[脚本说明]
+
+左上角三横-更多-快手果园，周期有点慢
+
+
+
+[青龙变量]
+
+抓get包，进快手果园，获取Cookie，多个用换行 & ,分割都可以；内置助力码环境变量:KS_SHARECODE,复制日志最后助力码
+
+https://ug-fission.kuaishou.com/rest/n/darwin/orchard/water/watering
+
+#快手果园
+export KS_COOKIE='client_key=***;did=***;kuaishou.api_st=***;ud=***;ver=***;'
+
+
+[圈X重写]
 [task_local]
 30 1,8,12,17 * * * https://raw.githubusercontent.com/passerby-b/ks_fruit/main/ks_fruit.js
 
 [Script]
-cron "30 1,8,12,17 * * *" script-path=https://raw.githubusercontent.com/passerby-b/ks_fruit/main/ks_fruit.js,tag=快手果园 
+cron "30 1,8,12,17 * * *" script-path=https://raw.githubusercontent.com/passerby-b/ks_fruit/main/ks_fruit.js,tag=快手果园
 
-CK环境变量:KS_COOKIE,多个用换行 & ,分割都可以
-内置助力码环境变量:KS_SHARECODE,复制日志最后助力码
+
 
 */
 
