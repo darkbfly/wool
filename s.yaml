@@ -62,8 +62,8 @@ services:
           type: timer
           config:    
             payload: 'flhs'
-            cronExpression: 'CRON_TZ=Asia/Shanghai 0 0 8-23 * * *'
-            enable: false
+            cronExpression: 'CRON_TZ=Asia/Shanghai 0 3 8-23 * * *'
+            enable: true
         - name: ksjsb
           type: timer
           config:    
