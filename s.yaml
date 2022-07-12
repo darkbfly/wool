@@ -39,6 +39,7 @@ services:
           flhsCookie: ${env.flhsCookie}
           jrttjsbHeader: ${env.jrttjsbHeader}
           ksjsbCookie: ${env.ksjsbCookie}
+          ksjsbapitoken: ${env.ksjsbCookie}
           jzttToken: ${env.jzttToken}
           kugouurl: ${env.kugouurl}
           jrttjsbReadNum: 3
