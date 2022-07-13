@@ -40,7 +40,6 @@ services:
           jrttjsbHeader: ${env.jrttjsbHeader}
           ksjsbCookie: ${env.ksjsbCookie}
           ksCookie: ${env.ksjsbCookie}
-          jiaocheng_data: ${env.ksjsbCookie}
           ksjsbcookie: ${env.ksjsbCookie}
           jzttToken: ${env.jzttToken}
           kugouurl: ${env.kugouurl}

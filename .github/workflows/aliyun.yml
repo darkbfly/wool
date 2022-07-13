@@ -35,4 +35,4 @@ jobs:
         run: |
           npm install @serverless-devs/s -g
           s config add --AccessKeyID $ALI_KEYID --AccessKeySecret $ALI_KEYSECRET --AccountID $ALI_ACCOUNTID
-          s deploy -y --use-local
+          s deploy -y --use-remote
