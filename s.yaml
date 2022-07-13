@@ -39,7 +39,8 @@ services:
           flhsCookie: ${env.flhsCookie}
           jrttjsbHeader: ${env.jrttjsbHeader}
           ksjsbCookie: ${env.ksjsbCookie}
-          ksjsbapitoken: ${env.ksjsbCookie}
+          ksCookie: ${env.ksjsbCookie}
+          jiaocheng_data: ${env.ksjsbCookie}
           jzttToken: ${env.jzttToken}
           kugouurl: ${env.kugouurl}
           jrttjsbReadNum: 3
@@ -70,6 +71,18 @@ services:
           config:    
             payload: 'ksjsb'
             cronExpression: 'CRON_TZ=Asia/Shanghai 0 33 7-23 * * *'
+            enable: true
+        - name: ks
+          type: timer
+          config:    
+            payload: 'ks'
+            cronExpression: 'CRON_TZ=Asia/Shanghai 0 36 7-23 * * *'
+            enable: true
+        - name: ksjsb_0622
+          type: timer
+          config:    
+            payload: 'ksjsb_0622'
+            cronExpression: 'CRON_TZ=Asia/Shanghai 0 40 7-23 * * *'
             enable: true
         - name: jrttjsb
           type: timer
