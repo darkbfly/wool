@@ -43,6 +43,7 @@ services:
           ksjsbcookie: ${env.ksjsbCookie}
           jzttToken: ${env.jzttToken}
           kugouurl: ${env.kugouurl}
+          flgReferer: ${env.flgReferer}
           jrttjsbReadNum: 3
           ALIYUN: 'true'
         memorySize: 128
@@ -102,3 +103,9 @@ services:
             payload: 'kgdzb'
             cronExpression: 'CRON_TZ=Asia/Shanghai 0 2 * * * *'
             enable: false
+        - name: flg
+          type: timer
+          config:    
+            payload: 'flg'
+            cronExpression: 'CRON_TZ=Asia/Shanghai 0,30 9 * * * *'
+            enable: true
