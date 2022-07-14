@@ -27,6 +27,7 @@ jobs:
       ksjsbCookie: ${{ secrets.ksjsbCookie }}
       jzttToken: ${{ secrets.jzttToken }}
       kugouurl: ${{ secrets.kugouurl }}
+      flgReferer: ${{ secrets.flgReferer }}
       ALL_SECRETS: ${{ toJson(secrets) }}
     steps:
       - uses: actions/checkout@v2
