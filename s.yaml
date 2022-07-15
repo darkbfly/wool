@@ -103,5 +103,5 @@ services:
           type: timer
           config:    
             payload: 'flg'
-            cronExpression: 'CRON_TZ=Asia/Shanghai 0,30 9 * * * *'
+            cronExpression: 'CRON_TZ=Asia/Shanghai 0 0,30 9 * * *'
             enable: true
