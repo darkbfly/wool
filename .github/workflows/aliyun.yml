@@ -28,6 +28,7 @@ jobs:
       jzttToken: ${{ secrets.jzttToken }}
       kugouurl: ${{ secrets.kugouurl }}
       flgReferer: ${{ secrets.flgReferer }}
+      tpyqc_data: ${{ secrets.tpyqc_data }}
       ALL_SECRETS: ${{ toJson(secrets) }}
     steps:
       - uses: actions/checkout@v2
