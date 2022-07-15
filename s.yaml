@@ -30,21 +30,17 @@ services:
         codeUri: ./
         handler: index.handler
         environmentVariables:
-          ltphone: ${env.ltphone}
-          ltpwd: ${env.ltpwd}
           iku_EMAIL: ${env.iku_EMAIL}
           iku_PWD: ${env.iku_PWD}
           JJ_EMAIL: ${env.JJ_EMAIL}
           JJ_PWD: ${env.JJ_PWD}
           flhsCookie: ${env.flhsCookie}
-          jrttjsbHeader: ${env.jrttjsbHeader}
           ksjsbCookie: ${env.ksjsbCookie}
           ksCookie: ${env.ksjsbCookie}
           ksjsbcookie: ${env.ksjsbCookie}
           jzttToken: ${env.jzttToken}
           kugouurl: ${env.kugouurl}
           flgReferer: ${env.flgReferer}
-          jrttjsbReadNum: 3
           ALIYUN: 'true'
         memorySize: 128
         timeout: 300
