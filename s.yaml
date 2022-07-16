@@ -47,12 +47,6 @@ services:
         memorySize: 128
         timeout: 600
       triggers:
-        - name: Chinaunicom
-          type: timer
-          config:    
-            payload: 'Chinaunicom'
-            cronExpression: 'CRON_TZ=Asia/Shanghai 0 5 9,11,18 * * *'
-            enable: false
         - name: jcCheck
           type: timer
           config:    
@@ -71,24 +65,6 @@ services:
             payload: 'ksjsb'
             cronExpression: 'CRON_TZ=Asia/Shanghai 0 33 7-23 * * *'
             enable: true
-        - name: jrttjsb
-          type: timer
-          config:    
-            payload: 'jrttjsb'
-            cronExpression: 'CRON_TZ=Asia/Shanghai 0 1-59/15 6-23 * * *'
-            enable: false
-        - name: jztt
-          type: timer
-          config:    
-            payload: 'jztt'
-            cronExpression: 'CRON_TZ=Asia/Shanghai 0 25 0,6-23 * * *'
-            enable: false
-        - name: kgdzb
-          type: timer
-          config:    
-            payload: 'kgdzb'
-            cronExpression: 'CRON_TZ=Asia/Shanghai 0 2 * * * *'
-            enable: false
         - name: flg
           type: timer
           config:    
