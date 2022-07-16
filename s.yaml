@@ -42,6 +42,7 @@ services:
           kugouurl: ${env.kugouurl}
           flgReferer: ${env.flgReferer}
           tpyqc_data: ${env.tpyqc_data}
+          TxStockNewbie: "1"
           ALIYUN: 'true'
         memorySize: 128
         timeout: 600
@@ -99,4 +100,10 @@ services:
           config:    
             payload: 'tpyqc'
             cronExpression: 'CRON_TZ=Asia/Shanghai 0 25 9 * * *'
+            enable: true
+        - name: txstockV2
+          type: timer
+          config:    
+            payload: 'txstockV2'
+            cronExpression: 'CRON_TZ=Asia/Shanghai 0 23 11,16 * * *'
             enable: true
