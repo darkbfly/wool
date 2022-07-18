@@ -89,5 +89,5 @@ services:
           type: timer
           config:    
             payload: 'meituan'
-            cronExpression: 'CRON_TZ=Asia/Shanghai 0 21 0,9,18 * * *'
+            cronExpression: 'CRON_TZ=Asia/Shanghai 0 0 0,9,18 * * *'
             enable: true
