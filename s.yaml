@@ -66,7 +66,7 @@ services:
           config:    
             payload: 'ksjsb'
             cronExpression: 'CRON_TZ=Asia/Shanghai 0 33 7-23 * * *'
-            enable: true
+            enable: false
         - name: flg
           type: timer
           config:    
