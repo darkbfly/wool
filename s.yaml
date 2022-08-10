@@ -84,7 +84,7 @@ services:
           config:    
             payload: 'txstockV2'
             cronExpression: 'CRON_TZ=Asia/Shanghai 0 23 11,16 * * *'
-            enable: true
+            enable: false
         - name: meituan
           type: timer
           config:    
