@@ -31,6 +31,7 @@ jobs:
       tpyqc_data: ${{ secrets.tpyqc_data }}
       mtTk: ${{ secrets.mtTk }}
       TxStockCookie: ${{ secrets.TxStockCookie }}
+      trdaCookie: ${{ secrets.trdaCookie }}
       ALL_SECRETS: ${{ toJson(secrets) }}
     steps:
       - uses: actions/checkout@v2

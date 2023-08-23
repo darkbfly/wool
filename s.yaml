@@ -15,7 +15,7 @@ services:
     component: fc
     actions: # 自定义执行逻辑
       pre-deploy: # 在deploy之前运行
-        - run: s build  # 要运行的命令行
+        - run: s build --custom-args ' --registry https://registry.npm.taobao.org'  # 要运行的命令行
           path: ./ # 命令行运行的路径
       # post-deploy: # 在deploy之后运行
       #   - run: s versions   # 要运行的命令行
@@ -43,6 +43,7 @@ services:
           flgReferer: ${env.flgReferer}
           tpyqc_data: ${env.tpyqc_data}
           TxStockCookie: ${env.TxStockCookie}
+          trdaCookie: ${env.trdaCookie}
           TxStockNewbie: "1"
           mtTk: ${env.mtTk}
           ALIYUN: 'true'
@@ -90,4 +91,10 @@ services:
           config:    
             payload: 'meituan'
             cronExpression: 'CRON_TZ=Asia/Shanghai 0 0 0,9,18 * * *'
+            enable: true
+        - name: meituan
+          type: timer
+          config:    
+            payload: 'trdaDraw'
+            cronExpression: 'CRON_TZ=Asia/Shanghai 0 46 6,18 * * *'
             enable: true
